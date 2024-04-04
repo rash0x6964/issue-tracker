@@ -12,6 +12,7 @@ import {
   Container,
   DropdownMenu,
   Flex,
+  Skeleton,
   Text,
 } from "@radix-ui/themes";
 
@@ -19,7 +20,7 @@ const NavBar = () => {
   return (
     <nav className="border-b mb-5 px-5 py-3">
       <Container>
-        <Flex justify="between">
+        <Flex justify="between" align="center">
           <Flex align="center" gap="3">
             <Link href="/">
               <AiFillBug />
@@ -63,7 +64,7 @@ const NavLinks = () => {
 const AuthStatus = () => {
   const { status, data: session } = useSession();
 
-  if (status === "loading") return null;
+  if (status === "loading") return <Skeleton width="3rem" />;
 
   if (status === "unauthenticated")
     return (
