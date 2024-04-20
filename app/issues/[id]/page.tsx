@@ -52,4 +52,6 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
+export const revalidate = 0;
+
 export default IssueDetailPage;
