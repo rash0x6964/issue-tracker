@@ -29,8 +29,9 @@ export default function RootLayout({
         <QueryClientProvider>
           <AuthProvider>
             <Theme appearance="light" accentColor="violet">
+              <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
               <NavBar />
-              <main className="p-5">
+              <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
                 <Container>{children}</Container>
               </main>
             </Theme>

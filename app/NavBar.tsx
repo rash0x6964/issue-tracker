@@ -16,9 +16,19 @@ import {
   Text,
 } from "@radix-ui/themes";
 
+import useScroll from "@/lib/hooks/use-scroll";
+
 const NavBar = () => {
+  const scrolled = useScroll(50);
+
   return (
-    <nav className="border-b mb-5 px-5 py-3">
+    <nav
+      className={`fixed top-0 w-full flex justify-center ${
+        scrolled
+          ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+          : "bg-white/0"
+      } z-30 transition-all mb-5 px-5 py-3`}
+    >
       <Container>
         <Flex justify="between" align="center">
           <Flex align="center" gap="3">
