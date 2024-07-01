@@ -15,7 +15,7 @@ export default function Footer() {
         </a>
       </p>
       <a
-        href="https://www.buymeacoffee.com"
+        href="https://buymeacoffee.com/rash0x6964"
         target="_blank"
         rel="noopener noreferrer"
         className="mx-auto mt-2 flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-gray-200 bg-white px-6 py-2 transition-all duration-75 hover:scale-105"

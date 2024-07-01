@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 import NavBar from "./NavBar";
 import { Container, Theme } from "@radix-ui/themes";
 import AuthProvider from "./auth/Provider";
-import QueryClientProvider from "./QueryClientProvider";
+import QueryClientProvider from "./dashboard/QueryClientProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,9 +29,9 @@ export default function RootLayout({
         <QueryClientProvider>
           <AuthProvider>
             <Theme appearance="light" accentColor="violet">
-              <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
+              <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 -z-10" />
               <NavBar />
-              <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
+              <main className="flex min-h-screen w-full flex-col justify-center py-32">
                 <Container>{children}</Container>
               </main>
             </Theme>
