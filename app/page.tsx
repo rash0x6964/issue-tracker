@@ -98,19 +98,20 @@ const features = [
     demo: <Image src={filter} layout="responsive" alt="" className="hover:scale-105 transition duration-500 ease-in-out"/>,
   },
   {
-    title: "Style your issues",
-    description:
-      "The ability to write using Markdown which make u style your issues as u like",
-    large: true,
-    demo: <Image src={style_issue} layout="responsive" alt="" className="hover:scale-105 transition duration-500 ease-in-out"/>,
-  },
-  {
     title: "Share it",
     description:
       "assign an issue / task to any user so can help find a solution",
-    large: false,
+    large: true,
     demo: <Image src={shear_it} layout="responsive" alt="" className="hover:scale-105 transition duration-500 ease-in-out"/>,
   },
+  {
+    title: "Style your issues",
+    description:
+      "The ability to write using Markdown which make u style your issues as u like",
+    large: false,
+    demo: <Image src={style_issue} layout="responsive" alt="" className="hover:scale-105 transition duration-500 ease-in-out"/>,
+  },
+
 ];
 
 export const metadata: Metadata = {
