@@ -8,6 +8,8 @@ import { Container, Theme } from "@radix-ui/themes";
 import AuthProvider from "./auth/Provider";
 import QueryClientProvider from "./dashboard/QueryClientProvider";
 
+import Footer from "./components/footer";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -32,8 +34,9 @@ export default function RootLayout({
               <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 -z-10" />
               <NavBar />
               <main className="flex min-h-screen w-full flex-col justify-center py-32">
-                <Container>{children}</Container>
+                <Container className="p-5">{children}</Container>
               </main>
+              <Footer />
             </Theme>
           </AuthProvider>
         </QueryClientProvider>
